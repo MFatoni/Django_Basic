@@ -1,0 +1,24 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<title>Hello</title>
+</head>
+<body> -->
+{% extends "main_template.html" %}
+{% block title %} My Hello Page {% endblock %}
+{% block content %}
+	Hello World <p>Today is {{ today }}</p>
+	we are
+	{% if today.day == 1 %}
+	the first day of month
+	{% elif today.day == 30 %}
+	the last day of month
+	{% else %}
+	i dont know
+	{% endif %} <br><br>
+	{% for day in days_of_week %}
+	{{ day }} <br>
+	{% endfor %}
+{% endblock %}
+<!-- </body>
+</html> -->
